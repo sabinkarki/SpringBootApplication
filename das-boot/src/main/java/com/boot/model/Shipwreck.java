@@ -27,6 +27,6 @@ public class Shipwreck {
 	private Integer depth;
 	private Double latitude;
 	private Double longitude;
-	private Integer yearDiscovered;
+	private Integer years_Discovered;
 
 }
