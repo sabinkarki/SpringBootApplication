@@ -27,7 +27,7 @@ public class ShipwreckController extends BaseController {
 		return shipwreckService.findAll();
 	}
 
-	@PostMapping
+	@PostMapping(value = "shipwrecks")
 	public Shipwreck create(@RequestBody Shipwreck shipwreck) {
 		// return MockDataLoader.create(shipwreck);
 		return shipwreckService.create(shipwreck);
