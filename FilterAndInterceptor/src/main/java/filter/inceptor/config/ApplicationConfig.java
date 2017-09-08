@@ -15,6 +15,6 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(daysOfWeekBasedAccessInterceptor);
+		registry.addInterceptor(daysOfWeekBasedAccessInterceptor).addPathPatterns("/interceptorTest", "/webFilter2");
 	}
 }

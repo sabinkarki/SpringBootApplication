@@ -24,7 +24,12 @@ public class HomeController {
 
 	@GetMapping(value = "/webFilter2")
 	public String fromWebFilter() {
-		return "I am from controller but executing from WebFilter2";
+		return "Filter WebFilter2 works";
+	}
+
+	@GetMapping(value = "/interceptorTest")
+	public String interceptorTest() {
+		return "Interceptor Works";
 	}
 
 }
