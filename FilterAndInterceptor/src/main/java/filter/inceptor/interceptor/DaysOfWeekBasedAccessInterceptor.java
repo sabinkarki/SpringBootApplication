@@ -16,7 +16,7 @@ public class DaysOfWeekBasedAccessInterceptor implements HandlerInterceptor {
 	public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("Request Completed");
+		System.out.println("Request Completed from Interceptor");
 
 	}
 
@@ -24,7 +24,7 @@ public class DaysOfWeekBasedAccessInterceptor implements HandlerInterceptor {
 	public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("Method exectued");
+		System.out.println("Method exectued from Interceptor");
 
 	}
 
@@ -32,10 +32,11 @@ public class DaysOfWeekBasedAccessInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
 		Calendar cal = Calendar.getInstance();
 		int dayOfWeek = cal.get(cal.DAY_OF_WEEK);
-		if (dayOfWeek == 6) {
+		if (dayOfWeek == 1) {
 			response.getWriter().write("Sunday is Holiday.So we are offline");
 			return false;
 		}
+		System.out.println("Request prehandle from Interceptor");
 		return true;
 	}
 
