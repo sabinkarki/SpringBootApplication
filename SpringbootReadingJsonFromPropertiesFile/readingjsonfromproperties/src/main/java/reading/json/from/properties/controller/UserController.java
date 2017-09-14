@@ -1,6 +1,5 @@
 package reading.json.from.properties.controller;
 
-import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,8 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import reading.json.from.properties.dataSetup.MockDataLoader;
 import reading.json.from.properties.model.User;
@@ -39,9 +36,10 @@ public class UserController {
 				myMap.put(user.getId(), user);
 			}
 		});
-		UserResponse response = new UserResponse();
-		response.setUsers(myMap);
 
+		List<User> users2 = new ArrayList<User>(myMap.values());
+		UserResponse response = new UserResponse();
+		response.setLstusers(users2);
 		return new ResponseEntity<UserResponse>(response, HttpStatus.OK);
 
 		// return myMap;
@@ -51,6 +49,7 @@ public class UserController {
 		 * 
 		 * }); return users2;
 		 */
+
 	}
 
 }
