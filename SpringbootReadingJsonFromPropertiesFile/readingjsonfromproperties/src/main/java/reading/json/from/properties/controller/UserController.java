@@ -36,7 +36,7 @@ public class UserController {
 				myMap.put(user.getId(), user);
 			}
 		});
-
+		
 		List<User> users2 = new ArrayList<User>(myMap.values());
 		UserResponse response = new UserResponse();
 		response.setLstusers(users2);
