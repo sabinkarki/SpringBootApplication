@@ -32,6 +32,8 @@ o/p
 
 <h2>Sample Json</h2>
 <pre>
+Run the application open post man and select POST method and in request body copy
+and paste the sample json below
 {
   "user":{
   "id":1,
