@@ -1,5 +1,5 @@
 <pre>
-This demo reads properties which is json in json fomat.
+This demo reads json from properties file.
 
 <h2>Software Requirements</h2>
 IDE
